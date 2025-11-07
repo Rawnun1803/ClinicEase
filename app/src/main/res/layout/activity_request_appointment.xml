@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/pad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestAppointmentActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tv_request_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/request_appointment_title"
+            android:textSize="20sp"
+            android:textColor="@color/primary"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Find Slots Button -->
+        <Button
+            android:id="@+id/btn_find_slots"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad"
+            android:text="@string/find_slots"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white" />
+
+        <!-- Slots Container -->
+        <LinearLayout
+            android:id="@+id/slots_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad" />
+
+    </LinearLayout>
+</ScrollView>

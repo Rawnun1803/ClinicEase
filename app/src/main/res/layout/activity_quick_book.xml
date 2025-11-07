@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/pad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceptionistQuickBookActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_quick_book_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quick_book_title"
+            android:textSize="20sp"
+            android:textColor="@color/primary"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_patient_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_patient_name"
+                android:autofillHints="name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                android:autofillHints="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/input_date"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_date_format"
+                android:inputType="date"
+                android:autofillHints="postalAddress" />
+
+            <EditText
+                android:id="@+id/input_time"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/pad_small"
+                android:hint="@string/hint_time_format"
+                android:inputType="time"
+                android:autofillHints="time" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_reason"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:autofillHints="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_conflict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/destructive"
+            android:layout_marginTop="@dimen/pad" />
+
+        <!-- Button bar: equal-width primary buttons with white text -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/pad_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_check"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"
+                android:text="@string/btn_check" />
+
+            <Button
+                android:id="@+id/btn_book"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/pad_small"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"
+                android:text="@string/btn_book" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="pad_small">8dp</dimen>
+    <dimen name="pad">16dp</dimen>
+    <dimen name="pad_large">24dp</dimen>
+    <dimen name="card_radius">18dp</dimen>
+    <dimen name="btn_height">56dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+</resources>

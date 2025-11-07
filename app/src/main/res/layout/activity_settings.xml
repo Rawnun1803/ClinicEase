@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/pad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tv_settings_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textSize="20sp"
+            android:textColor="@color/primary"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Working Hours Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/pad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_working_hours_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/working_hours"
+                    android:textColor="@color/primary"
+                    android:fontFamily="sans-serif-medium" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/pad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/et_work_start"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="@string/start_time_hint"
+                        android:inputType="time"
+                        android:autofillHints="none" />
+
+                    <EditText
+                        android:id="@+id/et_work_end"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/pad_small"
+                        android:hint="@string/end_time_hint"
+                        android:inputType="time"
+                        android:autofillHints="none" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Appointment Duration Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/pad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_duration_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/appointment_duration"
+                    android:textColor="@color/primary"
+                    android:fontFamily="sans-serif-medium" />
+
+                <EditText
+                    android:id="@+id/et_slot_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/pad_small"
+                    android:hint="@string/duration_hint"
+                    android:inputType="number"
+                    android:autofillHints="none" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Notifications Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="@dimen/pad"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_notifications_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notifications"
+                        android:textColor="@color/primary"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/tv_notification_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notifications_desc"
+                        android:textColor="@color/secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Use SwitchCompat for better compatibility -->
+                <!-- Use SwitchCompat with explicit empty texts and app:showText="false" to avoid NPE in layout editor -->
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw_notifications"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="none"
+                    android:contentDescription="@string/notifications"
+                    android:textOn=""
+                    android:textOff=""
+                    app:showText="false" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btn_sync_now"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="@dimen/pad"
+            android:backgroundTint="@color/primary"
+            android:text="@string/sync_now"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_save_settings"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/pad_small"
+            android:text="@string/save_settings"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

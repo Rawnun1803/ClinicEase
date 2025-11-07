@@ -1,0 +1,44 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Local configuration files
+local.properties
+.gradle/
+.idea/
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+*.iml
+
+# Android Studio navigation editor temp files
+.navigation/
+
+# Log files
+*.log
+
+# Keystore files (DO NOT SHARE signing keys!)
+*.jks
+*.keystore
+
+# Firebase / Google services secrets
+google-services.json
+
+# User-specific files
+*.hprof
+
+# Generated output
+app/release/
+app/debug/
+
+# Cache
+.gradle/
+build/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml

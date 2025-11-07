@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/pad_small"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/btn_height"
+    android:background="@android:color/transparent">
+
+    <!-- Slot info -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/slot_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_date"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            tools:text="Nov 8, 2025" />
+
+        <TextView
+            android:id="@+id/slot_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_time"
+            android:textColor="@color/secondary"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            tools:text="09:00 AM" />
+    </LinearLayout>
+
+    <!-- Select Button -->
+    <Button
+        android:id="@+id/btn_select_slot"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/select"
+        android:backgroundTint="@color/primary"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        tools:ignore="TextContrastCheck" />
+</LinearLayout>

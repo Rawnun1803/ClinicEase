@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/pad_small"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="4dp"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/pad_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Visit Date -->
+        <TextView
+            android:id="@+id/visit_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_visit_date"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            tools:text="Oct 15, 2025" />
+
+        <!-- Visit Reason -->
+        <TextView
+            android:id="@+id/visit_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_small"
+            android:text="@string/sample_visit_reason"
+            android:textColor="@color/secondary"
+            android:textSize="14sp"
+            tools:text="Annual Physical" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

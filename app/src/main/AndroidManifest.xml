@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.clinicease.app"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- If you plan to send SMS from device (not recommended for production), request SEND_SMS -->
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.ClinicEase">
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".PatientProfileActivity" />
+        <activity android:name=".RequestAppointmentActivity" />
+        <activity android:name=".ReceptionistQuickBookActivity" />
+        <activity android:name=".PatientHomeActivity" />
+        <activity android:name=".DoctorHomeActivity" />
+        <activity android:name=".RoleSelectionActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
