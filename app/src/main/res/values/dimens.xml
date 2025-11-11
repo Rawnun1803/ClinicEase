@@ -5,4 +5,8 @@
     <dimen name="card_radius">18dp</dimen>
     <dimen name="btn_height">56dp</dimen>
     <dimen name="icon_size">24dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="card_corner">10dp</dimen>
+    <dimen name="button_radius">12dp</dimen>
 </resources>

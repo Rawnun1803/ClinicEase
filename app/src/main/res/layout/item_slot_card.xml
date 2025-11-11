@@ -6,7 +6,7 @@
     android:gravity="center_vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/btn_height"
+    android:layout_marginTop="@dimen/pad_small"
     android:background="@android:color/transparent">
 
     <!-- Slot info -->
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sample_date"
             android:textColor="@color/primary"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:fontFamily="sans-serif-medium"
             tools:text="Nov 8, 2025" />
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sample_time"
             android:textColor="@color/secondary"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:fontFamily="sans-serif"
             tools:text="09:00 AM" />
     </LinearLayout>
@@ -40,11 +40,15 @@
     <!-- Select Button -->
     <Button
         android:id="@+id/btn_select_slot"
+        android:layout_margin="@dimen/pad"
+        android:paddingHorizontal="@dimen/pad_large"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:gravity="center"
         android:text="@string/select"
         android:backgroundTint="@color/primary"
         android:textColor="@android:color/white"
         android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
         tools:ignore="TextContrastCheck" />
 </LinearLayout>

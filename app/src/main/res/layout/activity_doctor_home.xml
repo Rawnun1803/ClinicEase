@@ -11,7 +11,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/pad"
         android:elevation="6dp"
-        android:background="@color/primary"
+        android:background="@drawable/header_background"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/doctor_name"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textColor="@color/white"
                 android:fontFamily="sans-serif-medium" />
 
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/today_date"
                 android:textColor="#DDE9FF"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <ImageButton
@@ -64,7 +64,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:padding="@dimen/pad"
+        android:padding="@dimen/pad_small"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -73,10 +73,18 @@
             android:id="@+id/tv_appointments_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_small"
             android:text="@string/appointments_label"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textColor="@color/primary"
             android:fontFamily="sans-serif-medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp" />
 
         <TextView
             android:id="@+id/tv_conflict_banner"

@@ -3,17 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/white"
-    android:padding="@dimen/pad"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Header -->
+    <!-- Rounded Blue Header -->
     <LinearLayout
+        android:id="@+id/header_container"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:layout_height="120dp"
+        android:background="@drawable/header_background"
+        android:gravity="center_vertical"
+        android:padding="@dimen/pad"
+        android:elevation="6dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -26,17 +28,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/welcome_user"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="@color/primary" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/tv_manage_subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/manage_appointments_subtitle"
-                android:textSize="12sp"
-                android:textColor="@color/secondary" />
+                android:textSize="16sp"
+                android:textColor="#DDE9FF" />
         </LinearLayout>
 
         <ImageButton
@@ -45,31 +47,33 @@
             android:layout_height="48dp"
             android:src="@android:drawable/ic_lock_power_off"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:tint="@color/primary"
+            android:tint="@android:color/white"
             android:contentDescription="@string/logout_label"
             tools:ignore="UseAppTint" />
     </LinearLayout>
 
-    <!-- Request button -->
-
-    <!-- Upcoming list -->
+    <!-- Request Appointment Button -->
     <Button
         android:id="@+id/btn_request_appointment"
         android:layout_width="320dp"
         android:layout_height="@dimen/btn_height"
-        android:layout_marginTop="@dimen/pad"
         android:layout_gravity="center"
+        android:layout_marginTop="@dimen/pad"
         android:backgroundTint="@color/primary"
         android:text="@string/request_appointment"
-        android:textColor="@color/white" />
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
+    <!-- Upcoming Appointments -->
     <TextView
         android:id="@+id/tv_upcoming_label"
         android:layout_marginTop="@dimen/pad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pad"
         android:text="@string/upcoming_appointments"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/primary" />
 

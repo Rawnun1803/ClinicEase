@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/request_appointment_title"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textColor="@color/primary"
             android:fontFamily="sans-serif-medium" />
 
@@ -26,11 +26,13 @@
             android:id="@+id/btn_find_slots"
             android:layout_width="320dp"
             android:layout_gravity="center"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/btn_height"
             android:layout_marginTop="@dimen/pad"
             android:text="@string/find_slots"
             android:backgroundTint="@color/primary"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center"/>
 
         <!-- Slots Container -->
         <LinearLayout

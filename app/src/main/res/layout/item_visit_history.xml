@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="@dimen/pad_small"
+        android:padding="@dimen/pad_large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sample_visit_date"
             android:textColor="@color/primary"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:fontFamily="sans-serif-medium"
             tools:text="Oct 15, 2025" />
 

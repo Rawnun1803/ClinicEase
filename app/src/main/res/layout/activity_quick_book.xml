@@ -9,19 +9,27 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad">
 
         <TextView
             android:id="@+id/tv_quick_book_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/quick_book_title"
-            android:textSize="20sp"
+            android:textSize="26sp"
             android:textColor="@color/primary"
             android:fontFamily="sans-serif-medium" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="@dimen/pad"
+            android:layout_marginTop="@dimen/pad_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -98,34 +106,36 @@
             android:textColor="@color/destructive"
             android:layout_marginTop="@dimen/pad" />
 
-        <!-- Button bar: equal-width primary buttons with white text -->
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/pad_large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2">
+            android:layout_marginTop="@dimen/pad"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
             <Button
                 android:id="@+id/btn_check"
-                android:layout_width="0dp"
+                android:layout_width="185dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/primary"
+                android:text="@string/btn_check"
                 android:textColor="@android:color/white"
-                android:text="@string/btn_check" />
+                android:textSize="16sp"
+                android:gravity="center" />
 
             <Button
                 android:id="@+id/btn_book"
-                android:layout_width="0dp"
+                android:layout_width="185dp"
                 android:layout_height="48dp"
-                android:layout_weight="1"
                 android:layout_marginStart="@dimen/pad_small"
+                android:layout_weight="1"
                 android:backgroundTint="@color/primary"
+                android:text="@string/btn_book"
                 android:textColor="@android:color/white"
-                android:text="@string/btn_book" />
+                android:textSize="16sp"
+                android:gravity="center" />
         </LinearLayout>
-
     </LinearLayout>
 
 </ScrollView>

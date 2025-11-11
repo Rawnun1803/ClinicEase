@@ -1,15 +1,15 @@
-// /app/src/main/java/com/clinicease/app/SettingsActivity.java
 package com.clinicease.app;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.clinicease.app.model.DoctorSettings;
-import com.clinicease.app.sync.SyncManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +17,9 @@ import java.util.Map;
 public class SettingsActivity extends AppCompatActivity {
 
     private EditText etWorkStart, etWorkEnd, etSlotDuration;
-    private Switch swNotifications;
+    private SwitchCompat swNotifications; // <-- use SwitchCompat
     private Button btnSave, btnSyncNow;
     private FirebaseFirestore db;
-    private DoctorSettings settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,35 +29,40 @@ public class SettingsActivity extends AppCompatActivity {
         etWorkStart = findViewById(R.id.et_work_start);
         etWorkEnd = findViewById(R.id.et_work_end);
         etSlotDuration = findViewById(R.id.et_slot_duration);
-        swNotifications = findViewById(R.id.sw_notifications);
+        swNotifications = findViewById(R.id.sw_notifications); // no cast needed with generics
         btnSave = findViewById(R.id.btn_save_settings);
         btnSyncNow = findViewById(R.id.btn_sync_now);
 
         db = FirebaseFirestore.getInstance();
 
+        // loadSettings can be left as-is; if it touches firestore and crashes,
+        // handle errors inside that method. For now, keep it:
         loadSettings();
 
         btnSave.setOnClickListener(v -> saveSettings());
         btnSyncNow.setOnClickListener(v -> {
-            SyncManager.triggerImmediateSync(this);
-            Toast.makeText(this, "Sync started", Toast.LENGTH_SHORT).show();
+            // If SyncManager exists; wrap in try/catch to be safe
+            try {
+                com.clinicease.app.sync.SyncManager.triggerImmediateSync(this);
+                Toast.makeText(this, "Sync started", Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                Toast.makeText(this, "Sync failed to start", Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
         });
     }
 
     private void loadSettings() {
         db.collection("doctor").document("main").get().addOnCompleteListener(task -> {
             if (task.isSuccessful() && task.getResult() != null && task.getResult().exists()) {
-                DocumentReference dr = task.getResult().getReference();
                 String ws = task.getResult().getString("workStart");
                 String we = task.getResult().getString("workEnd");
                 Long slot = task.getResult().getLong("slotDurationMin");
                 etWorkStart.setText(ws == null ? "09:00" : ws);
                 etWorkEnd.setText(we == null ? "17:00" : we);
                 etSlotDuration.setText(slot == null ? "30" : Long.toString(slot));
-                // notifications default true
                 swNotifications.setChecked(true);
             } else {
-                // defaults
                 etWorkStart.setText("09:00");
                 etWorkEnd.setText("17:00");
                 etSlotDuration.setText("30");

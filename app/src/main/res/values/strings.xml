@@ -61,4 +61,5 @@
     <string name="sample_reason">General Checkup</string>
     <string name="sample_visit_date">Oct 15, 2025</string>
     <string name="sample_visit_reason">Annual Physical</string>
+    <string name="login">Login</string>
 </resources>

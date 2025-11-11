@@ -10,7 +10,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad">
 
         <!-- Header -->
         <TextView
@@ -18,9 +19,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/settings_title"
-            android:textSize="20sp"
+            android:textSize="26sp"
             android:textColor="@color/primary"
             android:fontFamily="sans-serif-medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp" />
 
         <!-- Working Hours Card -->
         <androidx.cardview.widget.CardView
@@ -41,12 +49,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/working_hours"
+                    android:textSize="20sp"
                     android:textColor="@color/primary"
                     android:fontFamily="sans-serif-medium" />
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/pad"
+                    android:layout_marginTop="@dimen/pad_small"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:weightSum="2">
@@ -92,6 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/appointment_duration"
+                    android:textSize="20sp"
                     android:textColor="@color/primary"
                     android:fontFamily="sans-serif-medium" />
 
@@ -132,6 +142,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/notifications"
+                        android:textSize="20sp"
                         android:textColor="@color/primary"
                         android:fontFamily="sans-serif-medium" />
 
@@ -141,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/notifications_desc"
                         android:textColor="@color/secondary"
-                        android:textSize="12sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Use SwitchCompat for better compatibility -->
@@ -167,7 +178,9 @@
             android:layout_marginTop="@dimen/pad"
             android:backgroundTint="@color/primary"
             android:text="@string/sync_now"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center" />
 
         <Button
             android:id="@+id/btn_save_settings"
@@ -176,7 +189,9 @@
             android:layout_marginTop="@dimen/pad_small"
             android:text="@string/save_settings"
             android:backgroundTint="@color/primary"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center" />
 
     </LinearLayout>
 </ScrollView>

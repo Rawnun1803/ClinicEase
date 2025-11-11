@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/patient_profile_title"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:fontFamily="sans-serif-medium"
             android:textColor="@color/primary" />
 
@@ -40,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/sample_patient_name"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
 
@@ -50,6 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/pad_small"
                     android:text="@string/sample_patient_phone"
+                    android:textSize="16sp"
                     android:textColor="@color/secondary" />
 
                 <TextView
@@ -58,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/pad_small"
                     android:text="@string/sample_patient_last_visit"
+                    android:textSize="16sp"
                     android:textColor="@color/secondary" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -69,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/pad"
             android:text="@string/recent_visits"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:fontFamily="sans-serif-medium"
             android:textColor="@color/primary" />
 

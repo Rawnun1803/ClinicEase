@@ -38,7 +38,7 @@
                 android:layout_marginStart="@dimen/pad_small"
                 android:text="@string/sample_time"
                 android:textColor="@color/secondary"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 tools:text="10:00 AM" />
         </LinearLayout>
 
@@ -50,7 +50,7 @@
             android:layout_marginTop="@dimen/pad_small"
             android:text="@string/sample_doctor_name"
             android:textColor="@color/primary"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:fontFamily="sans-serif-medium"
             tools:text="Dr. Sarah Johnson" />
 

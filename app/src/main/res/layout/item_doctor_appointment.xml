@@ -17,7 +17,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/pad_small">
 
             <TextView
                 android:id="@+id/item_time"
@@ -26,7 +27,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="09:00 AM"
                 android:textColor="@color/primary"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/item_patient"
@@ -36,7 +37,7 @@
                 android:fontFamily="sans-serif"
                 android:text="John Doe"
                 android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <TextView
@@ -46,7 +47,7 @@
             android:layout_marginTop="@dimen/pad_small"
             android:text="Reason for visit"
             android:textColor="@color/secondary"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +64,9 @@
                 android:backgroundTint="@color/primary"
                 android:contentDescription="@string/desc_edit"
                 android:text="@string/btn_edit"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:gravity="center" />
 
             <Button
                 android:id="@+id/btn_extend"
@@ -74,13 +77,14 @@
                 android:backgroundTint="@color/primary"
                 android:contentDescription="@string/desc_extend"
                 android:text="@string/btn_extend"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:gravity="center" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/pad"
-            android:layout_marginBottom="@dimen/pad"
+            android:layout_marginTop="@dimen/pad_small"
             android:orientation="horizontal"
             android:weightSum="4">
 
@@ -92,7 +96,9 @@
                 android:backgroundTint="@color/primary"
                 android:contentDescription="@string/desc_cancel"
                 android:text="@string/btn_cancel"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:gravity="center" />
 
             <Button
                 android:id="@+id/btn_done"
@@ -103,8 +109,11 @@
                 android:backgroundTint="@color/primary"
                 android:contentDescription="@string/desc_done"
                 android:text="@string/btn_done"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:gravity="center" />
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
